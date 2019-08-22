@@ -1,0 +1,134 @@
+.news-alert {
+    margin-top: 20px;
+  }
+  
+  .news-alert a:link {
+    text-decoration: none;
+  }
+  
+  .carousel-content {
+    color: black;
+    display: flex;
+    align-items: center;
+  }
+  
+  .carousel-content p {
+    margin: 0px;
+    color: #4d7498;
+   color: #4d7498;
+  }
+  
+  .input-group .form-control {
+    margin-bottom: -1px !important;
+    margin-top: 1px !important;
+  }
+  
+  .form-control {
+    height: 34px !important;
+    padding: 6px 12px !important;
+    font-size: 14px !important;
+  }
+
+  .icon-login {
+    margin-top: 10px;
+    color: #cecece;
+  }
+  
+  .msg-recuperar-senha {
+    cursor: pointer;
+    margin-top: 12px;
+    font-size: 12px;
+  color: #4d7498;
+  
+  }
+  
+  .msg-recuperar-senha-aviso {
+    margin-top: 12px;
+    font-size: 12px;
+    color: #4d7498;
+  }
+  
+  .btn-enter {
+    font-size: 16pt;
+    width: 100%;
+    margin-top: 40px;
+    height: 50px;
+  }
+  
+  .btn-primary {
+    background-color: #4375A3;
+    border-color: #4375A3;
+  
+    &:active,
+    &:focus {
+      outline: none !important;
+    }
+  }
+  
+  .panel {
+    min-height: 350px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    background-color: white;
+  
+    .panel-body {
+      padding: 30px 40px;
+  
+      .input-group-addon {
+        background-color: white;
+        border: none;
+  
+        i {
+          font-size: 24px;
+          color: #999;
+        }
+      }
+  
+      .input-mv-login {
+        box-shadow: none;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-radius: 0;
+      }
+  
+    }
+  }
+  
+  .link-alt-senha {
+    margin-bottom: 16px;
+    margin-top: 16px;
+  
+    .btn-link-mv {
+      padding: 0;
+      color: #4375A3;
+      text-decoration: underline;
+  
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  
+  .container-fluid {
+    height: 100vh;
+   /*  background: linear-gradient(to bottom, #4375A3 248px, #EBEBEB 248px); */
+   background: linear-gradient(to bottom, #4d7498 248px, #EBEBEB 248px);
+  }
+  
+  .content-form {
+    position: absolute;
+    top: 176px;
+  }
+  
+  .margem-login {
+  
+    margin-left: 26%;
+  
+  }
+
+  .btn-primary[_ngcontent-wbw-c1] {
+    background-color: #4d7498;
+    border-color: #4d7498;
+}
+  

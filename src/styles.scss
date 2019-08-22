@@ -1,0 +1,124 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+/* You can add global styles to this file, and also import other style files */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  //   border: 1px solid green !important;
+  -webkit-text-fill-color: #333 !important;
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+nse-modal {
+
+  .ng-valid[required],
+  .ng-valid.required {
+    border-left: 3px solid #42a948;
+  }
+
+  .ng-invalid:not(form) {
+    border-left: 3px solid #a94442;
+  }
+
+}
+
+.row {
+  margin: 0 -4px 10px -4px;
+}
+
+[class*="col-"] {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+
+.input-group {
+  margin-bottom: 10px;
+}
+
+.small-loading {
+  text-align: center;
+
+  img {
+    width: 5rem;
+  }
+}
+
+
+.panel {
+  min-height: 372px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+
+  .panel-body {
+    min-height: 372px;
+
+    .img-logo {
+      margin: 0 auto;
+      width: 90px;
+      height: 60px;
+
+      img {
+        height: 107px;
+      }
+    }
+  }
+}
+
+
+
+.loader-ajax {
+  position: absolute;
+  top: calc(100vh - 115vh);
+  left: calc(100vw - 84vw);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+// Fonts color
+.fc-grey-40 {
+  color: #999999
+}
+
+.fc-green-default {
+  color: #7EC044
+}
+
+.fc-green-darker {
+  color: #3C5C21;
+}
+
+.fc-grey-40 {
+  color: #999;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+  color: #fff;
+  border-color: #54c75f;
+  background-color: #7fd281;
+}
+
+.overflow-y {
+  overflow-y: auto !important;
+}
+
+.icone {
+  color: #497095;
+  font-size: 20px;
+  cursor:pointer;
+}
+
+.search {
+  color: #497095;
+}

@@ -1,0 +1,43 @@
+<div id="mySidenav" class="sidenav">
+  <ul style="list-style-type: none;">
+    <li class="paddin-menu mt-3" routerLinkActive="active"><a routerLink="/cadastro">Cadastro</a></li>
+    <li class="paddin-menu" routerLinkActive="active"><a routerLink="/clientes">Clientes</a></li>
+    <li class="paddin-menu" routerLinkActive="active"><a routerLink="/processos">Processo</a></li>
+  </ul>
+</div>
+
+<!-- Use any element to open the sidenav -->
+
+
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+
+<nav class="container-fluid">
+
+  <div class="row">
+    <div class="col-md-1 col-sm-1"><span (click)="openNav()">
+        <i class="mv-basico menu">menu</i></span>
+    </div>
+    <div class="col-md-8 col-sm-2">
+      <div class="col-md-6"> <img  style="width: 214px;" src="./assets/img/lawer.PNG"  alt=""></div>
+      <!--  <img _ngcontent-rld-c1="" alt="MVGE LOGO" class="img-logo" data-placement="right" data-toggle="tooltip"
+          src="assets/img/logo-soulmv.svg" title="" data-original-title="Sistemas Estratégicos"> -->
+    </div>
+    <div style="margin-top:7px;" class="col-md-2 col-sm-3">
+      <span style="font-size: 12px;">
+   <strong  style="color: #5794b9;"> Bem vindo: {{usuarioLogado}} {{dataHora}}</strong>
+      </span>
+    </div>
+    <div class="col-md-1 col-sm-1">
+      <span (click)="deslogar()">
+        <i class="mv-basico exit">ligar_desligar</i>
+      </span>
+    </div>
+  </div>
+
+</nav>
+<!-- <div id="main">
+    <p>asd</p>
+</div> -->
+
+
+<app-load *ngIf="loading"></app-load>

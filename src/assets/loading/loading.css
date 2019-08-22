@@ -1,0 +1,15 @@
+.banner-nav-info {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2150;
+    background-color: #fff;
+}
+
+.banner-nav-info.is-loading {
+    background-image: url("assets/ajax-loader.gif");
+    background-repeat: no-repeat;
+    background-position: center center;
+    right: 0px;
+    bottom: 0px;
+}

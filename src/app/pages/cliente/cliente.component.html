@@ -1,0 +1,85 @@
+<div class="padding">
+  <form (ngSubmit)="prepararSalvarCliente()" [formGroup]="formCadastro">
+
+    <div class="row">
+      <div class="col-md-11 col-sm-11">
+
+      </div>
+      <div class="col-md-1 col-sm-1">
+        <button type="submit" style="background-color: #497095; color: white;" class="btn button mb-2">Salvar</button>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label><span style="color: red;">*</span>Nome:</label>
+        <input type="text" formControlName="NOME" class="form-control" placeholder="Nome">
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <label>CPF:</label>
+        <input type="text" formControlName="CPF" class="form-control " placeholder="Cpf">
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <label>RG:</label>
+        <input type="text" formControlName="RG" class="form-control" placeholder="RG">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col-md-3 mb-3">
+        <label><span style="color: red;">*</span> CEP:</label>
+        <input id="cep" onkeypress="$(this).mask('000.000-00');" formControlName="CEP" (blur)="consultarCep()"
+          type="text" class="form-control " placeholder="Cep">
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <label>Endereço:</label>
+        <input type="text" formControlName="ENDERECO" class="form-control" placeholder="Informe o Endereço">
+      </div>
+
+      <div class="col-md-2 mb-3">
+          <label>Telefone:</label>
+          <input type="text" formControlName="TELEFONE" class="form-control" placeholder="Informe o telefone">
+        </div>
+
+      <div class="col-md-1 mb-3">
+        <label>N°:</label>
+        <div class="input-group">
+          <input type="text" formControlName="NUMERO" class="form-control" placeholder="Número">
+          <div class="invalid-feedback">
+            Please choose a username.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col-md-3 mb-3">
+        <label>Bairro:</label>
+        <input type="text" formControlName="BAIRRO" class="form-control " placeholder="Bairro">
+      </div>
+      <div class="col-md-3 mb-3">
+        <label>Cidade:</label>
+        <input type="text" formControlName="CIDADE" class="form-control" placeholder="Cidade">
+      </div>
+      <div class="col-md-1 mb-3">
+        <label>UF</label>
+        <input type="text" formControlName="UF" class="form-control" placeholder="Uf">
+      </div>
+      <div class="col-md-5 mb-3">
+        <label>Complemento:</label>
+        <input type="text" formControlName="COMPLEMENTO" class="form-control" placeholder="Complemento">
+      </div>
+    </div>
+
+
+
+
+
+  </form>
+
+</div>
+
+<app-alert #alert></app-alert>

@@ -1,0 +1,98 @@
+<!-- Lista de Clientes -->
+
+
+
+
+
+<div class="padding">
+  <div class="list-group">
+
+    <div class="row">
+      <div class="col-md-8 mt-5 pb-3 mb-3">
+        <div style="padding-left: 22px;" class="input-group">
+
+          <input #SEARCHR (keyup)="searchClientesValue = SEARCHR.value" placeholder="Pesquise pelo cliente" autofocus
+            type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+          <div class="input-group-append">
+
+            <span class="input-group-text"> <i class='fas fa-search search'></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-11 col-sm-11">
+
+      </div>
+      <div class="col-md-1 col-sm-1">
+        <button type="submit" style="background-color: #497095; color: white;" (click)="exibirRelatorio()"
+          class="btn button mb-2"><i class="fa fa-file-text-o mr-2"></i>Relatorio</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-10">
+
+      </div>
+
+    </div>
+
+    <div  [style.height]="getSizePorcentagem(80)" id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <div >
+          <a class="list-group-item list-group-item-action flex-column align-items-start"
+            *ngFor="let processo of listaProcesso | pesquisarFilter: searchClientesValue: searchClientes">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">{{processo.processo}}</h5>
+
+              <small> <span class="badge badge-pill"
+                  [ngClass]="processo.status == 'Débito' ? 'badge-danger' : 'badge-success' ">{{processo.status}}</span></small>
+              <!-- <small >  <span class="badge badge-pill badge-success">Success</span></small> -->
+
+            </div>
+            <p class="mb-1"><span class="color lista">Polo Ativo:</span><span
+                class="valores">{{processo.polo_ativo}}</span></p>
+            <p class="mb-1"><span class="color lista">Polo Passivo:</span> <span
+                class="valores">{{processo.polo_passivo}}</span></p>
+            <div *ngIf="processo.isShowMore">
+              <p class="mb-1"><span class="color lista">Valor: </span><span class="valores">{{processo.valor}}</span>
+              </p>
+              <p class="mb-1"><span class="color lista">Mês de Vencimento:</span> <span
+                  class="valores">{{processo.vencimento}}</span></p>
+              <p class="mb-1"><span class="color lista">Tipo: </span><span class="valores">{{processo.tipo}}</span></p>
+              <p class="mb-1"><span class="color lista">Parcelas: </span><span
+                  class="valores">{{processo.parcelas}}</span><span class="lista"> x </span><span
+                  class="valores">{{processo.parcelado}}</span></p>
+              <p *ngIf="processo.desconto > 0" class="mb-1"><span class="lista">Desconto: </span><span
+                  class="valores">{{processo.desconto}}</span></p>
+              <p *ngIf="processo.multa > 0" class="mb-1"><span class="lista">Multa: </span><span
+                  class="valores">{{processo.multa}}</span></p>
+            </div>
+            <div class="text-right">
+
+
+              <!--   <span >
+                    <i (click)="editarProcesso(processo)" class='fas fa-pencil-alt pr-5 icone'></i>
+                  </span>
+        
+              <span>
+                <i (click)="excluirProcesso(processo)" class="fa fa-trash icone" aria-hidden="true"></i>
+              </span> -->
+
+
+            </div>
+
+            <span class="show-more">
+
+              <a style="cursor:pointer;"
+                (click)="processo.isShowMore = !processo.isShowMore">{{!processo.isShowMore? 'ver mais' : 'ver menos'}}</a>
+
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
