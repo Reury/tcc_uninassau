@@ -44,7 +44,7 @@ export class ClientesComponent implements OnInit {
     if (isNullOrUndefined(this.listaClientes)) {
       this.listaClientes = [];
     }
-    this.clienteService.listaClientes().subscribe(data => {
+    this.clienteService.listaClientes(sessionStorage.getItem('cd_usuario')).subscribe(data => {
       if (data) {
         this.listaClientes = data;
       }

@@ -10,12 +10,12 @@ export class ClienteService {
 
   constructor(private http: HttpClient) { }
 
-  public cadastrarCliente(cliente: ICliente): Observable<ICliente> {
-    return this.http.post<ICliente>(`http://localhost:60409/api/cliente/CadastrarCliente`, cliente);
+  public cadastrarCliente(cliente: ICliente, cdUsuario:string): Observable<ICliente> {
+    return this.http.post<ICliente>(`http://localhost:60409/api/cliente/CadastrarCliente/${cdUsuario}`, cliente);
   }
 
-  public listaClientes(): Observable<ICliente[]> {
-    return this.http.get<ICliente[]>(`http://localhost:60409/api/cliente/GetClientes`);
+  public listaClientes(cdUsuario:string): Observable<ICliente[]> {
+    return this.http.get<ICliente[]>(`http://localhost:60409/api/cliente/GetClientes/${cdUsuario}`);
   }
 
 

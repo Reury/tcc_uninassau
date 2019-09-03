@@ -59,7 +59,7 @@ export class ProcessosComponent implements OnInit {
 
   getTodosProcessos() {
     const cdconta = sessionStorage.getItem("cd_usuario");
-    this.processoService.getProcessos(cdconta).subscribe(data => {
+    this.processoService.getTodosProcessos(cdconta).subscribe(data => {
       if (data) {
         this.listaProcesso = data;
         this.valor = data.length;

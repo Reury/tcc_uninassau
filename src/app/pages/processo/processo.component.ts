@@ -67,7 +67,8 @@ export class ProcessoComponent implements OnInit {
 
       });
     } else {
-      this.processoService.cadastrarProcesso(this.processoObj, this.cdCliente).subscribe(data => {
+      const cdUsuario = sessionStorage.getItem('cd_usuario');
+      this.processoService.cadastrarProcesso(this.processoObj, this.cdCliente,cdUsuario).subscribe(data => {
         if (data) {
           this.getListaProcessso();
           this.formulario.reset();
@@ -121,7 +122,8 @@ export class ProcessoComponent implements OnInit {
     };
   }
   getListaProcessso() {
-    this.processoService.getProcessos(this.cdCliente).subscribe(data => {
+    const cdUsuario = sessionStorage.getItem('cd_usuario');
+    this.processoService.getProcessos(this.cdCliente,cdUsuario).subscribe(data => {
       this.listaProcesso = data;
     });
   }

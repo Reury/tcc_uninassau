@@ -53,7 +53,7 @@ export class ClienteComponent implements OnInit {
     this.cliente.cep = this.formCadastro.get("CEP").value;
     this.cliente.bairro = this.formCadastro.get("BAIRRO").value;
     if (isNullOrUndefined(this.cliente.cd_cliente) || isNaN(this.cliente.cd_cliente)) {
-      this.clienteService.cadastrarCliente(this.cliente).subscribe(data => {
+      this.clienteService.cadastrarCliente(this.cliente,sessionStorage.getItem('cd_usuario')).subscribe(data => {
         if (data > 0) {
           this.alertBI.toastConfirmacao('Cadastrado com sucesso!', EClasseAlertas.AlertSuccess);
           this.formCadastro.reset();

@@ -10,16 +10,16 @@ export class ProcessoService {
 
   constructor(private http: HttpClient) { }
 
-  public cadastrarProcesso(processo: IProcesso, cdCliente: number): Observable<number> {
-    return this.http.post<number>(`http://localhost:60409/api/processo/CadastrarProcesso/${cdCliente}`, processo);
+  public cadastrarProcesso(processo: IProcesso, cdCliente: number,cdUsuario: string): Observable<number> {
+    return this.http.post<number>(`http://localhost:60409/api/processo/CadastrarProcesso/${cdCliente}/${cdUsuario}`, processo);
   }
 
-  public getProcessos(cdCliente: any): Observable<IProcesso[]> {
-    return this.http.get<IProcesso[]>(`http://localhost:60409/api/processo/ListarProcessos/${cdCliente}`);
+  public getProcessos(cdCliente : any, cdUsuario: any): Observable<IProcesso[]> {
+    return this.http.get<IProcesso[]>(`http://localhost:60409/api/processo/ListarProcessos/${cdCliente}/${cdUsuario}`);
   }
 
-  public getTodosProcessos(): Observable<IProcesso[]> {
-    return this.http.get<IProcesso[]>(`http://localhost:60409/api/processo/ListarTodosProcessos`);
+  public getTodosProcessos(cdUsuario:string): Observable<IProcesso[]> {
+    return this.http.get<IProcesso[]>(`http://localhost:60409/api/processo/ListarTodosProcessos/${cdUsuario}`);
   }
 
   public ExcluirProcesso(processo: IProcesso): Observable<number> {
